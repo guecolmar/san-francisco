@@ -89,6 +89,7 @@ body {
 
 .Header-btn {
     font-size: 1.5rem;
+    display: none;
 }
 
 .Nav {
@@ -100,10 +101,35 @@ body {
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
+    gap: 2rem;
+    color: white;
+    position: relative;
+}
+
+.Nav-li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav-a {}
+
+.Nav-ul--sub {
+    width: 160px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    background-color: brown;
+    padding: 1rem;
     gap: 1rem;
 }
 
-.Nav-li {}
-
-.Nav-a {}
+.Nav-li--sub {
+    display: flex;
+    flex-wrap: nowrap;
+}
 

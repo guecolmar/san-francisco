@@ -69,6 +69,7 @@ body {
 
 
 .Header {
+    z-index: 1;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -142,6 +143,75 @@ body {
     background-color: brown;
     padding: 1.5rem 0;
 }
+
+main {
+    position: relative;
+}
+
+.Carrousel {
+    width: 100%;
+    background-color: cadetblue;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    top: -40px;
+    z-index: -1;
+}
+
+.Carrousel-container {
+    width: 400%;
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: all 2s ease;
+    /* transform: translateX(0); */
+}
+
+.Carrousel-img {
+    background-color: aquamarine;
+}
+
+.Carrousel-arrow {
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    position: absolute;
+    top: calc(50% - 1.5rem);
+}
+
+.Carrousel-arrow--next {
+    right: 0;
+}
+
+.Carrousel-arrow--prev {
+    left: 0;
+}
+
+.Carrousel-ul {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Carrousel-li {
+
+}
+
+.Carrousel-btn {
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+
 
 @media (max-width: 768px) {
     .Nav-hamburguerBtn {

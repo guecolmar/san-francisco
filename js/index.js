@@ -29,6 +29,48 @@ navBtn.forEach((eachBtn, i) => {
     })
 })
 
+// CARROUSEL
+
+let posicion = 0
+const siguiente = document.querySelector('.Carrousel-arrow--next')
+const carrouselContainer = document.querySelector('.Carrousel-container')
+const anterior = document.querySelector('.Carrousel-arrow--prev')
+const carrouselBtns = document.querySelectorAll('.Carrousel-btn')
+let desplazamiento = function () {
+    carrouselContainer.style.transform = `translateX(-${posicion * (100 / 4)}%)`
+}
+
+siguiente.addEventListener('click', function() {
+    posicion++
+    if (posicion >= 4) {
+        posicion = 0
+    }
+    desplazamiento ()
+})
+
+anterior.addEventListener('click',function(){
+    posicion--
+    if (posicion < 0) {
+        posicion = 3
+    }
+    desplazamiento ()
+})
+
+carrouselBtns.forEach(function(eachBtn, i) {
+    carrouselBtns[i].addEventListener('click', function (){
+        posicion = i
+        desplazamiento ()
+    })
+})
+
+setInterval(function(){
+    posicion++
+    if (posicion >= 4) {
+        posicion = 0
+    }
+    desplazamiento ()
+} , 10000)
+
 
 
 

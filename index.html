@@ -10,65 +10,29 @@
 <body>
     <header class="Header">
         <div class="Header-wrapperLeft">
-            <a href="#" class="Header-a">
+            <div class="logo">
+                <p class="logo-rojo">San Francisco</p>
+                <p class="logo-dorado">Bay Area</p>
+            </div>
+            <!-- <a href="#" class="Header-a">
                 <img src="assets/logo.png" alt="Logo San Francisco" class="Header-img">
-            </a>
+            </a> -->
         </div>
         <div class="Header-wrapperRight">
             <button class="Nav-hamburguerBtn">&#9778;</button>
             <nav class="Header-nav Nav">
                 <ul class="Nav-ul">
-                    <button class="Nav-btn">
-                        <li class="Nav-li"><a href="#" class="Nav-a">Puentes</a>
-                            <ul class="Nav-ul--sub">
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Bay Bridge</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Golden Gate</a></li>
-                            </ul>
-                        </li>
-                    </button>
-                    <button class="Nav-btn">
-                        <li class="Nav-li"><a href="#" class="Nav-a">Barrios</a>
-                            <ul class="Nav-ul--sub">
-                                <li class="Nav-li--sub"><a href="" class="Nav-a"></a>Castro</li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a"></a>Chinatown</li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a"></a>North Beach</li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a"></a>Más barrios</li>
-                            </ul>
-                        </li>
-                    </button>
-                    <button class="Nav-btn">
-                        <li class="Nav-li"><a href="#" class="Nav-a">Atracciones</a>
-                            <ul class="Nav-ul--sub">
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Pier 39</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Cable Car</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Cable Car</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Más atracciones</a></li>
-                            </ul>
-                        </li>
-                    </button>
-                    <button class="Nav-btn">
-                        <li class="Nav-li"><a href="#" class="Nav-a">Excursiones</a>
-                            <ul class="Nav-ul--sub">
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Alcatraz</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Sausalito</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Napa & Sonoma</a></li>
-                            </ul>
-                        </li>
-                    </button>
-                    <button class="Nav-btn">
-                        <li class="Nav-li"><a href="#" class="Nav-a">Tours</a>
-                            <ul class="Nav-ul--sub">
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Gratis</a></li>
-                                <li class="Nav-li--sub"><a href="" class="Nav-a">Baratos</a></li>
-                            </ul>
-                        </li>
-                    </button>
+                    <li class="Nav-li"><a href="#" class="Nav-a">Puentes</a></li>
+                    <li class="Nav-li"><a href="#" class="Nav-a">Barrios</a></li>
+                    <li class="Nav-li"><a href="#" class="Nav-a">Atracciones</a></li>
+                    <li class="Nav-li"><a href="#" class="Nav-a">Excursiones</a></li>
+                    <li class="Nav-li"><a href="#" class="Nav-a">Tours</a></li>
                 </ul>
             </nav>
-    </div>
+        </div>
     </header>
     <main>
-        <section class="Carrousel">
+        <div class="Carrousel">
             <div class="Carrousel-container">
                 <img src="assets/carrousell/carrousel-golden-gate-bridge-200px-1125px.jpg" alt=# class="Carrousel-img">
                 <img src="assets/carrousell/carrousel-cable-car-200px-1125px.jpg" alt=# class="Carrousel-img">
@@ -76,30 +40,41 @@
                 <img src="assets/carrousell/carrousel-teather-200px-1125px.jpg" alt=# class="Carrousel-img">
             </div>
     
-            <button class="Carrousel-arrow Carrousel-arrow--next"></button>
-            <button class="Carrousel-arrow Carrousel-arrow--prev"></button>
+            <button class="Carrousel-arrow Carrousel-arrow--next">
+                <span class="Carrousel-span">&gt;</span>
+            </button>
+            <button class="Carrousel-arrow Carrousel-arrow--prev">
+                <span class="Carrousel-span">&lt;</span>
+            </button>
     
             <ul class="Carrousel-ul">
                 <li class="Carrousel-li">
-                    <button class="Carrousel-btn">0</button>
+                    <button class="Carrousel-btn"></button>
                 </li>
                 <li class="Carrousel-li">
-                    <button class="Carrousel-btn">1</button>
+                    <button class="Carrousel-btn"></button>
                 </li>
                 <li class="Carrousel-li">
-                    <button class="Carrousel-btn">2</button>
+                    <button class="Carrousel-btn"></button>
                 </li>
                 <li class="Carrousel-li">
-                    <button class="Carrousel-btn">3</button>
+                    <button class="Carrousel-btn"></button>
                 </li>
             </ul>
+        </div>
+        <section class="Section">
+            <h1>Visita San Francisco</h1>
+            <div class="Section-wrapper">
+                <picture>
+                    <source srcset="ruta/extra-grande.jpg" media="(min-width:1440px)">
+                    <source srcset="ruta/movil.jpg" media="(max-width:480px)">
+                    <img src=# alt="Texto at">
+                </picture> 
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur omnis, id earum rem ratione minima asperiores eligendi ipsa aliquid tenetur itaque, temporibus ut doloribus saepe illo suscipit enim natus nisi voluptas sit, aut harum deleniti. Consequuntur harum voluptates similique excepturi soluta molestias quos iusto repellendus, libero dignissimos rerum sed fugiat.</p>
+            </div>
         </section>
-    </main>
-
 </body>
 </html>
-
-
 
 
 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: msFilter;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>

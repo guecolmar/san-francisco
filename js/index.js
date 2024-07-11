@@ -25,7 +25,7 @@ navBtn.forEach((eachBtn, i) => {
         navBtn.forEach((eachNavBtn, i) => {
             submenu[i].classList.remove('isActive')
         })
-        submenu[i].classList.add('isActive')
+        submenu[i].classList.toggle('isActive')
     })
 })
 
@@ -36,6 +36,7 @@ const siguiente = document.querySelector('.Carrousel-arrow--next')
 const carrouselContainer = document.querySelector('.Carrousel-container')
 const anterior = document.querySelector('.Carrousel-arrow--prev')
 const carrouselBtns = document.querySelectorAll('.Carrousel-btn')
+
 let desplazamiento = function () {
     carrouselContainer.style.transform = `translateX(-${posicion * (100 / 4)}%)`
 }
@@ -56,10 +57,14 @@ anterior.addEventListener('click',function(){
     desplazamiento ()
 })
 
-carrouselBtns.forEach(function(eachBtn, i) {
-    carrouselBtns[i].addEventListener('click', function (){
+carrouselBtns.forEach((eachBtn, i) => {
+    carrouselBtns[i].addEventListener('click', () => {
         posicion = i
-        desplazamiento ()
+        desplazamiento();
+        // carrouselBtns.forEach ((eachBtn, i) => {
+        //     carrouselBtns[i].classList.remove('isActive')
+        // })
+        // carrouselBtns[i].classList.add('isActive')
     })
 })
 

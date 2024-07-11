@@ -55,8 +55,66 @@ form, input, label, select, option, textarea, button {
 
 /* Fin Reset */
 
+/* dancing-script-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/dancing-script-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* dancing-script-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/dancing-script-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* noto-sans-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/noto-sans-v36-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* noto-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/noto-sans-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* noto-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/noto-sans-v36-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* noto-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/noto-sans-v36-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
     font-size: 100%;
+    --color-golden: rgb(129, 107, 63);
+    --color-light-golden: rgba(200, 175, 130, 0.403);
+    --color-red: rgb(169,32,46);
+    --color-redondo: rgb(255, 255, 255, 0.6);
+    --color-white: rgb(234,242,239);
+    --color-sivel: rgb(179,184,182);
+    --color-smoky-black: rgb(13,9,10);
+    --color-cream: rgb(255, 247, 235);
 }
 
 html {
@@ -64,28 +122,61 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans', Helvetica, sans-serif;
+    background-color: var(--color-light-golden);
 }
 
+/* Dancing Script   
+Indie Flower
+great vibes
+Yellowtail
+Mr Dafoe
+Arizonia
+norican
+Style Script ***
+rouge script ***
+corinthia
+meow script
+carattere
+*/
 
 .Header {
-    z-index: 1;
-    width: 100%;
-    margin: 0 auto;
+    width: 95%;
+    border-radius: 40px;
+    margin: 1rem auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content:space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: brown;
-    border-bottom-left-radius: 10px 10px;
-    border-bottom-right-radius: 10px 10px;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-red);
 }
 
 .Header-wrapperLeft {
-    padding: 0 0 0 1rem;
-    background-color: aqua;
-    width: 6rem;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.logo {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-cream);
+}
+
+.logo-rojo {
+    color: var(--color-red);
+    font-size: 1.8em;
+
+}
+.logo-dorado {
+    color: var(--color-golden);
 }
 
 .Header-a {}
@@ -103,6 +194,7 @@ body {
 .Nav-hamburguerBtn {
     font-size: 1.5rem;
     display: none;
+    color: var(--color-red);
 }
 
 .Nav-ul {
@@ -116,7 +208,7 @@ body {
 }
 
 .Nav-li {
-    color: white;
+    color: var(--color-red);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -125,47 +217,22 @@ body {
 
 .Nav-a {}
 
-.Nav-ul--sub {
-    display: none;
-}
-
-.Nav-ul--sub.isActive {
-    width: 8.3rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 1rem;
-    gap: 1rem;
-    border-bottom-left-radius: 10px 10px;
-    border-bottom-right-radius: 10px 10px;
-    background-color: brown;
-    padding: 1.5rem 0;
-}
-
-main {
-    position: relative;
-}
-
 .Carrousel {
-    width: 100%;
+    width: 90%;
+    margin: 100px auto 0;
     background-color: cadetblue;
     margin: 2rem auto;
     position: relative;
     overflow: hidden;
-    position: absolute;
-    top: -40px;
-    z-index: -1;
+    border-radius: 40px;
 }
 
 .Carrousel-container {
     width: 400%;
-    background-color: burlywood;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     transition: all 2s ease;
-    /* transform: translateX(0); */
+    box-shadow: 15px 9px 30px 6px rgba(0,0,0,0.61);
 }
 
 .Carrousel-img {
@@ -173,11 +240,19 @@ main {
 }
 
 .Carrousel-arrow {
-    width: 3rem;
-    height: 3rem;
-    background-color: black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 2rem;
+    height: 5rem;
+    width: 3.5rem;
     position: absolute;
-    top: calc(50% - 1.5rem);
+    top: calc(50% - 2.5rem);
+    transition: background-color 0.5s ease-in;
+}
+
+.Carrousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .Carrousel-arrow--next {
@@ -186,6 +261,15 @@ main {
 
 .Carrousel-arrow--prev {
     left: 0;
+}
+
+.Carrousel-span {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.5s ease-in;
+}
+
+.Carrousel-span:hover {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .Carrousel-ul {
@@ -199,16 +283,23 @@ main {
     gap: 1rem;
 }
 
-.Carrousel-li {
-
-}
-
 .Carrousel-btn {
     width: 1rem;
     height: 1rem;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
 }
+
+.Carrousel-btn.isActive {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+
+
+
+
+
 
 
 
@@ -219,16 +310,16 @@ main {
         position: relative;
         justify-content: flex-end;
         margin-right: 1rem;
-        color: white;
     }
     .Nav-ul {
         display: none;
     }
     .Nav-ul.isActive {
-        background-color: brown;
-        position: absolute;
+        background-color: var(--color-cream);
+        width:100%;
+        /* position: absolute; */
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         flex-direction: column;
         right: center;
         padding: 1rem;

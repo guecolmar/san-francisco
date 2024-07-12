@@ -107,14 +107,14 @@ form, input, label, select, option, textarea, button {
 
 :root {
     font-size: 100%;
-    --color-golden: rgb(129, 107, 63);
+    --color-golden: rgb(121, 99, 55);
     --color-background: rgb(169,32,46);
     --color-red: rgb(169,32,46);
     --color-redondo: rgb(255, 255, 255, 0.6);
     --color-white: rgb(234,242,239);
     --color-sivel: rgb(179,184,182);
     --color-smoky-black: rgb(13,9,10);
-    --color-cream: rgb(255, 247, 235);
+    --color-cream: rgb(248, 245, 241);
 }
 
 html {
@@ -124,21 +124,8 @@ html {
 body {
     font-family: 'Noto Sans', Helvetica, sans-serif;
     background-color: var(--color-background);
+    font-style: normal;
 }
-
-/* Dancing Script   
-Indie Flower
-great vibes
-Yellowtail
-Mr Dafoe
-Arizonia
-norican
-Style Script ***
-rouge script ***
-corinthia
-meow script
-carattere
-*/
 
 .Header {
     width: 95%;
@@ -224,9 +211,8 @@ carattere
 .Carrousel {
     width: 90%;
     max-width: 1260px;
-    margin: 100px auto 0;
+    margin: 3rem auto 5rem;
     background-color: cadetblue;
-    margin: 2rem auto;
     position: relative;
     overflow: hidden;
     border-radius: 40px;
@@ -308,7 +294,7 @@ carattere
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 2rem;
-    margin: 5rem auto;
+    margin: 0 auto 5rem;
     border: 2px solid var(--color-red);
     border-radius: 20px;
 }
@@ -340,11 +326,11 @@ carattere
 }
 
 .Sports {
-    margin: 5rem auto;
+    margin: 0 auto 5rem;
     background-color: var(--color-cream);
     width: 95%;
     max-width: 1260px;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     border-radius: 20px;
     padding: 2rem;
 }
@@ -422,9 +408,79 @@ carattere
 
 }
 
+.Register {
+    margin: 0 auto 5rem;
+    background-color: var(--color-cream);
+    width: 95%;
+    max-width: 1260px;
+    padding: 2rem;
+    border-radius: 20px;
+}
 
 
 
+.Footer {
+    width: 100%;
+    background-color: var(--color-cream);
+    padding: 2rem 0;
+}
+
+.Footer-Wrapper {
+    width: 95%;
+    max-width: 1260px;
+    padding: 2rem;
+    margin: auto;
+    border: 1px solid var(--color-red);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-Logo {}
+
+.Footer-menu {}
+
+.Footer-ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Footer-li {
+    color: var(--color-red);
+}
+
+.Rrss {
+    border-bottom: 1px solid var(--color-golden);
+    width: 134px;
+    margin: auto;
+}
+
+.Rrss-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+
+}
+
+.Rrss-li {
+
+}
+
+.Rrss-img {
+    transition: transform 30ms ease;
+}
+
+.Rrss-img:hover {
+    transform: scale(1.1);
+}
 
 
 @media (max-width: 768px) {
@@ -449,18 +505,6 @@ carattere
         right: 0;
         border-bottom-left-radius: 10px 10px;
         border-bottom-right-radius: 10px 10px;
-    }
-    .Nav-ul--sub.isActive {
-        right: 99%;
-        width: fit-content;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        border-bottom-right-radius: 0;
-        background-color: brown;
-        padding: 0 1rem 1rem;
     }
 }
 

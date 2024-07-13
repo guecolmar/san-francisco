@@ -18,7 +18,6 @@
                 <img src="assets/logo.png" alt="Logo San Francisco" class="Header-img">
             </a> -->
         </div>
-        <div class="Header-wrapperRight">
             <button class="Nav-hamburguerBtn">&#9778;</button>
             <nav class="Header-nav Nav">
                 <ul class="Nav-ul">
@@ -120,12 +119,109 @@
             </div>
         </article>
 
-        <article class="Register">
-            <h3>Registrate para más información</h3>
 
-            <label for="">nombre</label>
-            <input type="text">
-        </article>
+
+
+
+
+        <form class="Register-Form" method="GET" action="#">
+            <h3 class="Register-h3">Suscribete para más información</h3>
+            <div class="Form-Wrapper">
+                <!-- First Name -->
+                <div class="Register-Row">
+                    <div class="Register-ColumnLeft">
+                        <label class="Register-Label Register-Label--name" for="name">
+                            * Nombre: 
+                        </label>
+                    </div>
+                    <div class="Register-ColumnRight">
+                        <input type="text" class="Register-Input" id="name" name="name" autofocus
+                            placeholder="Escribe tu nombre" required>
+                    </div>
+                </div>
+                    <!-- Lastname -->
+                    <div class="Register-Row">
+                        <div class="Register-ColumnLeft">
+                            <label class="Register-Label Register-Label--lastname" for="lastname">
+                                * Apellidos: 
+                            </label>
+                        </div>
+                        <div class="Register-ColumnRight">
+                            <input type="text" class="Register-Input" id="lastname" name="lastname" autofocus
+                                placeholder="Escribe tu apellido" required>
+                        </div>
+                    </div>
+                <!-- Email -->
+                <div class="Register-Row">
+                    <div class="Register-ColumnLeft">
+                        <label class="Register-Label Register-Label--email" for="email">
+                            * Email:
+                        </label>
+                    </div>
+                    <div class="Register-ColumnRight">
+                        <input type="email" class="Register-Input" id="email" name="email" placeholder="Escribe tu Email"
+                            required>
+                    </div>
+                </div>
+                <!-- Age -->
+                <div class="Register-Row">
+                    <div class="Register-ColumnLeft">
+                        <label class="Register-Label Register-Label--age" for="age">
+                            Edad:
+                        </label>
+                    </div>
+                    <div class="Register-ColumnRight">
+                        <input type="number" class="Register-Input" id="number" name="age" min="13" max="125" Placeholder="Edad">
+                    </div>
+                </div>
+                <!-- Drop Down -->
+                <div class="Register-Row">
+                    <div class="Register-ColumnLeft">
+                        <label class="Register-Label Register-Label--comentarios" for="zone">
+                            ¿De qué parte de San Francisco te gustaría saber más?
+                        </label>
+                    </div>
+                    <div class="Register-ColumnRight">
+                        <select class="Register-Select" name="zone" id="zone" required>
+                            <option class="Register-Option" value="" disabled selected>Selecciona una zona</option>
+                            <option class="Register-Option" value="norte">Norte</option>
+                            <option class="Register-Option" value="sur">Sur</option>
+                            <option class="Register-Option" value="este">Este</option>
+                            <option class="Register-Option" value="oeste">Oeste</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Comment section --->
+                <div class="Register-Row">
+                    <div class="Register-ColumnLeft">
+                        <label class="Register-Label Register-Label--Textarea" for="comments">
+                            Sugerencias y comentarios:
+                        </label>
+                    </div>
+                    <div class="Register-ColumnRight">
+                        <textarea placeholder="Escribe tus comentarios..." class="Register-Textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Checkbox -->
+            <div class="Register-CheckboxWrapper">
+                <input type="checkbox" class="Register-Checkbox" id="checkbox" name="checkbox" autofocus
+                    required>
+                <label class="Register-Label Register-Label--checkbox" for="checkbox">
+                    * Terminos y condiciones
+                </label>
+            </div>
+            <!-- submit the form -->
+            <button class="submit" type="submit">
+                Enviar
+            </button>
+        </form>
+
+
+
+
+
+
 
         <footer class="Footer">
             <div class="Footer-Wrapper">

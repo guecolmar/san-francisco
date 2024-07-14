@@ -69,7 +69,7 @@ form, input, label, select, option, textarea, button {
     --color-golden: rgb(121, 99, 55);
     --color-red: rgb(169,32,46);
     --color-redondo: rgb(255, 255, 255, 0.6);
-    --color-white: rgb(234,242,239);
+    --color-white: white;
     --color-sivel: rgb(179,184,182);
     --color-black: black;
     --color-cream: rgb(248, 245, 241);
@@ -84,6 +84,7 @@ body {
     background-color: var(--color-red);
     font-style: normal;
     font-weight: 400;
+    position: relative;
 }
 
 .Header {
@@ -227,7 +228,7 @@ body {
     bottom: 40px;
     display: flex;
     justify-content: center;
-    text-shadow: 0px 0px 3px var(--color-black);
+    text-shadow: 0px 0px 4px var(--color-black);
     transition: transform 0.3s ease;
 }
 
@@ -237,6 +238,7 @@ body {
 
 /* index.html secctions San Francisco */
 
+.Excursiones-grid,
 .Barrio,
 .SanFrancisco {
     background-color: var(--color-cream);
@@ -347,12 +349,14 @@ body {
 }
 
 
+.Excursiones-picture,
 .SanFrancisco-picture,
 .Sports-picture,
 .Barrio-picture {
     width: 100%;
 }
 
+.Excursiones-img,
 .SanFrancisco-img,
 .Sports-img,
 .Barrio-img {
@@ -638,6 +642,57 @@ select:invalid {
     opacity: 1;
 }
 
+/* ****************************************************************************** */
+/* PAGINA: excursiones css code*/
+
+.Excursiones-background {
+    width: 100%;
+    background-color: gray;
+    transform: translateY(-71px);
+    position: relative;
+    height: 90vh;
+    background-image: url(../assets/img-excursiones/excursiones-paralax-2000px-web.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.Excursiones-h1 {
+    width: 100%;
+    color: var(--color-white);
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(30px);
+    text-shadow: 0px 0px 4px var(--color-black);
+}
+
+.Excursiones-grid {
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Excursiones-wrapper {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.Excursiones-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.Excursiones-h2 {
+    color: var(--color-white);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
 @media screen and (max-width: 768px) {
@@ -679,7 +734,8 @@ select:invalid {
     }
 
     .Barrio,
-    .SanFrancisco {
+    .SanFrancisco,
+    .Excursiones-grid {
         width: 95%;
         margin: 0 auto 2rem;
         gap: 1rem;
@@ -708,6 +764,7 @@ select:invalid {
         font-size: 1.5em;
     }
 
+    .Excursiones-picture,
     .Sports-picture {
         border-radius: 10px;
     }
@@ -848,5 +905,13 @@ select:invalid {
     
     .Rrss-img:hover {
         transform: scale(1.1);
+    }
+
+    .Excursiones-h1 {
+        font-size: 1.5em;
+    }
+
+    .Excursiones-grid {
+        grid-template-columns: repeat(3,1fr);
     }
 }

@@ -55,14 +55,6 @@ form, input, label, select, option, textarea, button {
 
 /* Fin Reset */
 
-/* dancing-script-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Dancing Script';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../assets/fonts/dancing-script-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
   /* dancing-script-700 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -72,48 +64,14 @@ form, input, label, select, option, textarea, button {
     src: url('../assets/fonts/dancing-script-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* noto-sans-200 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 200;
-    src: url('../fonts/noto-sans-v36-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* noto-sans-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/noto-sans-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* noto-sans-600 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/noto-sans-v36-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-  /* noto-sans-800 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/noto-sans-v36-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 :root {
     font-size: 100%;
     --color-golden: rgb(121, 99, 55);
-    --color-background: rgb(169,32,46);
     --color-red: rgb(169,32,46);
     --color-redondo: rgb(255, 255, 255, 0.6);
     --color-white: rgb(234,242,239);
     --color-sivel: rgb(179,184,182);
-    --color-smoky-black: rgb(13,9,10);
+    --color-black: black;
     --color-cream: rgb(248, 245, 241);
 }
 
@@ -122,96 +80,69 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans', Helvetica, sans-serif;
-    background-color: var(--color-background);
+    font-family: Helvetica, sans-serif;
+    background-color: var(--color-red);
     font-style: normal;
+    font-weight: 400;
 }
 
 .Header {
     width: 95%;
-    max-width: 1400px;
-    border-radius: 40px;
-    margin: 1rem auto;
+    max-width: 1600px;
+    border-radius: 20px;
+    margin: auto;
     position: sticky;
-    top: 1rem;
+    top: 0.5rem;
     z-index: 1;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content:space-between;
     align-items: center;
     font-weight: 600;
-    padding: 0.8rem 2rem;
+    padding: 0.5rem 1rem;
     background-color: var(--color-cream);
     border: 1px solid var(--color-red);
     box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
-.Header-wrapperLeft {
-    display: block;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.logo {
+.Logo {
     font-family: 'Dancing Script';
     font-weight: 700;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-cream);
 }
 
-.logo-rojo {
+.Logo-rojo {
     color: var(--color-red);
     font-size: 1.8em;
 
 }
-.logo-dorado {
+.Logo-dorado {
     color: var(--color-golden);
 }
 
-.Header-a {}
-
-.Header-img {}
-
-.Header-wrapperRight {
-
-}
-
-.Nav {
-    
-}
-
-.Nav-hamburguerBtn {
+.Header-btn {
     font-size: 1.5rem;
     display: none;
     color: var(--color-red);
 }
 
 .Nav-ul {
-    padding: 0 0.5rem 0 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    position: relative;
-}
-
-.Nav-li {
     color: var(--color-red);
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     align-items: center;
+    gap: 1.5rem;
 }
 
-.Nav-a {}
+/* CARROUSEL  */
 
 .Carrousel {
     width: 90%;
-    max-width: 1260px;
+    max-width: 1400px;
     position: relative;
     overflow: hidden; 
     margin: 3rem auto 5rem;
@@ -283,48 +214,62 @@ body {
 
 .Carrousel-btn.isActive {
     background-color: rgba(255, 255, 255, 0.9);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
+.Carrousel-h1 {
+    width: 100%;
+    color: var(--color-white);
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 3em;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0px 0px 3px var(--color-black);
+    transition: transform 0.3s ease;
+}
+
+.Carrousel-h1:hover {
+    transform: scale(1.1);
+}
+
+/* index.html secctions San Francisco */
+
+.Barrio,
 .SanFrancisco {
     background-color: var(--color-cream);
-    width: 95%;
-    max-width: 1260px;
+    width: 90%;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 2rem;
     margin: 0 auto 5rem;
-    border: 2px solid var(--color-red);
     border-radius: 20px;
 }
 
+.Barrio-wrapper,
 .SanFrancisco-wrapper {
     display: flex;
     flex-flow: column nowrap;
 }
 
-.SanFrancisco-Picture {
+.SanFrancisco-picture,
+.Barrio-picture {
+    width: 100%;
+}
+
+.SanFrancisco-img,
+.Barrio-img {
+    width: 100%;
     overflow: hidden;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-.SanFrancisco-h1 {
-    color: var(--color-golden);
-    font-size: 2em;
-    font-weight: 600;
-    padding: 0 0 1rem;
-    text-align: center;
-}
-
-.SanFrancisco-p {
-    text-align: center;
-}
-
-.SanFrancisco-Historia-Picture {
-    order: 1;
-}
-
+.Barrio-h2,
 .SanFrancisco-h2 {
     color: var(--color-golden);
     font-size: 2em;
@@ -333,11 +278,23 @@ body {
     text-align: center;
 }
 
+.Barrio-p,
+.SanFrancisco-p {
+    text-align: center;
+}
+
+.SanFrancisco-Historia-picture {
+    order: 1;
+}
+
+
+/* index.html article Sports */
+
 .Sports {
     margin: 0 auto 5rem;
     background-color: var(--color-cream);
-    width: 95%;
-    max-width: 1260px;
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto 5rem;
     border-radius: 20px;
     padding: 2rem;
@@ -389,19 +346,20 @@ body {
     grid-column: span 2;
 }
 
-.Sports-Picture {
-    border-radius: 20px;
+
+.SanFrancisco-picture,
+.Sports-picture,
+.Barrio-picture {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit: cover;
 }
 
-.Sports-img {
+.SanFrancisco-img,
+.Sports-img,
+.Barrio-img {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .Sports-p--title {
@@ -412,8 +370,11 @@ body {
 
 }
 
+/* index.html register form */
+
 .Register-Form {
     width: 90%;
+    max-width: 1400px;
     border-radius: 20px;
     background-color: var(--color-cream);
     display: flex;
@@ -425,11 +386,7 @@ body {
 }
 
 .Register-Label {
-    font-family: 'Noto Sans';
     color: var(--color-red);
-}
-
-.Form-Wrapper {
 }
 
 .Register-Row {
@@ -477,7 +434,6 @@ body {
 
 select:invalid {
     opacity: 0.5;
-    font-family: 'Noto Sans';
 }
 
 .Register-Textarea {
@@ -493,7 +449,6 @@ select:invalid {
 
 .Register-Textarea::placeholder,
 .Register-Input::placeholder {
-    font-family: 'Noto Sans';
     color: var(--color-golden);
     font-size: 0.8rem;
     opacity: 0.5;
@@ -518,7 +473,7 @@ select:invalid {
     padding: 0.5rem 1rem;
     margin: 10px;
     border: 1px solid var(--color-golden);
-    cursor: pointer;
+
     transition: all 500ms ease;
 }
 
@@ -526,6 +481,8 @@ select:invalid {
     background-color: var(--color-cream);
     color: var(--color-golden);
 }
+
+/* FOOTER */
 
 .Footer {
     width: 100%;
@@ -535,7 +492,7 @@ select:invalid {
 
 .Footer-Wrapper {
     width: 95%;
-    max-width: 1260px;
+    max-width: 1400px;
     padding: 2rem;
     margin: auto;
     border: 1px solid var(--color-red);
@@ -545,10 +502,6 @@ select:invalid {
     justify-content: center;
     align-items: center;
 }
-
-.Footer-Logo {}
-
-.Footer-menu {}
 
 .Footer-ul {
     display: flex;
@@ -575,11 +528,6 @@ select:invalid {
     align-items: center;
     gap: 0.6rem;
     padding: 0.5rem;
-
-}
-
-.Rrss-li {
-
 }
 
 .Rrss-img {
@@ -592,9 +540,21 @@ select:invalid {
 
 /* ****************************************************************************** */
 /* PAGINA: Bridge css code*/
+.Bridges-h1,
+.Barrios-h1 {
+    width: 100%;
+    color: var(--color-white);
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
 
-.Bridge {
+.Bridges {
     width: 90%;
+    max-width: 1400px;
     border-radius: 20px;
     background-color: var(--color-cream);
     display: flex;
@@ -605,56 +565,102 @@ select:invalid {
     margin: 0 auto 5rem;
 }
 
-.Bridge-UpperWrapper {
+.Bridges-UpperWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.Bridge-Picture {
-
-}
-
-.Bridge-img {
-    overflow: hidden;
+.Bridges-picture {
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* Añadir un max height */
 }
 
-.Bridge-Picture {}
+.Bridges-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
 
-.Bridge-img {}
+.Bridges-h2 {
+    color: var(--color-golden);
+    font-size: 2em;
+    font-weight: 600;
+    padding: 1.5rem 0;
+    text-align: center;
+}
 
-.Bridge-LowerWrapper {}
+.Bridge {
 
-.Bridge-h2 {}
+}
+
+.Bridge-btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.Bridge-button {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid var(--color-cream);
+    transition: border-bottom 0.3s ease-in;
+}
+
+.Bridge-button.isActive {
+    border-bottom: 1px solid var(--color-golden);
+}
+
+.Bridge-paragraphs {
+    position: relative;
+}
+
+.Bridge-p {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.Bridge-p:first-child {
+    position: static;
+}
+
+.Bridge-p.isActive {
+    opacity: 1;
+}
 
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
 @media screen and (max-width: 768px) {
-    .Header {
-        width: 100%;
-        border-radius: 0;
-        margin: 0;
-        position: sticky;
-        top: -1px;
-        z-index: 1;
-        padding: 0.8rem 1rem;
-        border: none;
-        box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.5);
+    .Header-btn {
+        display: block;
+        padding: 0 1rem 0 0;
+        cursor: pointer;
     }
 
-    .Nav-hamburguerBtn {
+    .Header-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .Header-nav.isActive {
         display: block;
     }
+
     .Nav-ul {
-        display: none;
-    }
-    .Nav-ul.isActive {
-        width:100%;
-        display: flex;
+        padding: 0.5rem 0;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .Carrousel {
@@ -668,13 +674,24 @@ select:invalid {
         height: 0.7rem;
     }
 
+    .Carrousel-h1 {
+        font-size: 2em;
+    }
+
+    .Barrio,
     .SanFrancisco {
+        width: 95%;
         margin: 0 auto 2rem;
         gap: 1rem;
         padding: 1rem;
     }
+
+    .Barrio {
+        grid-template-columns: 1fr;
+    }
     
     .Sports {
+        width: 95%;
         margin: 0 auto 2rem;
         border-radius: 20px;
         padding: 1rem;
@@ -691,7 +708,7 @@ select:invalid {
         font-size: 1.5em;
     }
 
-    .Sports-Picture {
+    .Sports-picture {
         border-radius: 10px;
     }
 
@@ -724,6 +741,7 @@ select:invalid {
     }
     
     .Footer-Wrapper {
+        width: 95%;
         padding: 1rem;
     }
 }
@@ -765,7 +783,7 @@ select:invalid {
         grid-column: span 1;
     }
     
-    .Sports-Picture {
+    .Sports-picture {
         border-radius: 20px;
         width: 100%;
         height: 100%;
@@ -831,6 +849,4 @@ select:invalid {
     .Rrss-img:hover {
         transform: scale(1.1);
     }
-
-
 }

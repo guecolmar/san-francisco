@@ -112,6 +112,8 @@ body {
     position: relative;
 }
 
+/* Header  */
+
 .Header,
 .Header-wrapper--excursiones {
     width: 95%;
@@ -166,15 +168,13 @@ body {
 }
 
 .Nav-li {
-    transition: all 0.5s ease
+    transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .Nav-li:hover {
     color: var(--color-golden);
     transform: scale(1.1);
 }
-
-/* CARROUSEL  */
 
 /* CSS común para todas las páginas */
 
@@ -225,6 +225,7 @@ body {
 .SanFrancisco-wrapper {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 }
 
 .Barrio-h2,
@@ -264,17 +265,13 @@ body {
     border-radius: 20px;
 }
 
-
-
-
-
-/* ************************************************************************************************ */
+/* Carrousel de imagenes*/
 .Carrousel {
     width: 90%;
     max-width: 1300px;
     position: relative;
     overflow: hidden; 
-    margin: 3rem auto 5rem;
+    margin: 2rem auto 5rem;
     border-radius: 20px;
 }
 
@@ -347,14 +344,36 @@ body {
     bottom: 20px;
 }
 
-/* index.html secctions San Francisco */
+/* index.html cambio de orden de las celdas del grid */
 
 .SanFrancisco-Historia-picture {
     order: 1;
 }
 
+.SanFrancisco-btn {
+    background-color: var(--color-golden);
+    border-radius: 0.5rem;
+    color: var(--color-cream);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0;
+    border: 1px solid var(--color-golden);
+    transition: background-color 500ms ease, color 500ms ease;
+}
 
-/* index.html article Sports */
+.SanFrancisco-span {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+.SanFrancisco-span:hover {
+    transform: rotate(0);
+}
+
+.SanFrancisco-btn:hover {
+    background-color: var(--color-cream);
+    color: var(--color-golden);
+}
+
+/* SPORTS Article */
 
 .Sports-grid {
     display: grid;
@@ -401,7 +420,7 @@ body {
     margin: 0 0 0.3rem;
 }
 
-/* index.html register form */
+/* Register form */
 
 .Register-Form {
     display: flex;
@@ -473,11 +492,11 @@ select:invalid {
 
 .submit {
     background-color: var(--color-golden);
-    border-radius: 4px;
+    border-radius: 0.5rem;
     color: var(--color-cream);
     font-size: 20px;
     padding: 0.5rem 1rem;
-    margin: 10px;
+    margin: 0.6rem;
     border: 1px solid var(--color-golden);
     transition: background-color 500ms ease, color 500ms ease;
 }
@@ -544,8 +563,7 @@ select:invalid {
     transform: scale(1.1);
 }
 
-/* ****************************************************************************** */
-/* PAGINA: Bridge css code*/
+/* puentes.html Bridge css code*/
 
 .Bridges {
     display: flex;
@@ -603,8 +621,7 @@ select:invalid {
     opacity: 1;
 }
 
-/* ****************************************************************************** */
-/* PAGINA: excursiones css code*/
+/* excursiones.html excursiones css code*/
 
 .Header-excursiones {
     width: 100%;
@@ -680,7 +697,6 @@ select:invalid {
         font-size: 2.5em;
     }
 }
-
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
 @media screen and (max-width: 767px) {

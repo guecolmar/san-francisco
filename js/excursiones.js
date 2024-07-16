@@ -9,7 +9,7 @@ headerBtn.addEventListener('click', () => {
     headerNav.classList.toggle('isActive')
 })
 
-// Efecto paralax la
+// Efecto paralax
 const excursionesBackGround = document.querySelector('.Excursiones-background')
 const excursionesH1 = document.querySelector('.Excursiones-h1')
 console.log(excursionesH1)

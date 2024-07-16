@@ -64,6 +64,31 @@ form, input, label, select, option, textarea, button {
     src: url('../assets/fonts/dancing-script-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* poppins-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/poppins-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* poppins-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
     font-size: 100%;
     --color-golden: rgb(121, 99, 55);
@@ -80,7 +105,7 @@ html {
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Poppins', Helvetica, sans-serif;
     background-color: var(--color-red);
     font-style: normal;
     font-weight: 400;
@@ -137,6 +162,15 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
+}
+
+.Nav-li {
+    transition: all 0.5s ease
+}
+
+.Nav-li:hover {
+    color: var(--color-golden);
+    transform: scale(1.1);
 }
 
 /* CARROUSEL  */
@@ -517,6 +551,12 @@ select:invalid {
 
 .Footer-li {
     color: var(--color-red);
+    transition: transform 0.3s ease;
+}
+
+.Footer-li:hover {
+    transform: scale(1.1)
+
 }
 
 .Rrss {
@@ -647,7 +687,6 @@ select:invalid {
 
 .Excursiones-background {
     width: 100%;
-    background-color: gray;
     transform: translateY(-71px);
     position: relative;
     height: 90vh;

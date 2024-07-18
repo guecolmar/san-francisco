@@ -72,14 +72,7 @@ form, input, label, select, option, textarea, button {
     font-weight: 400;
     src: url('../assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-  /* poppins-500 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../assets/fonts/poppins-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+
   /* poppins-600 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -89,15 +82,18 @@ form, input, label, select, option, textarea, button {
     src: url('../assets/fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* Variables de colores y tamaños */
 :root {
     font-size: 100%;
-    --color-golden: rgb(121, 99, 55);
-    --color-red: rgb(169,32,46);
-    --color-redondo: rgb(255, 255, 255, 0.6);
+    /* Colores personalizados */
+    font-size: 100%;
+    --secondary-color-golden: rgb(121, 99, 55);
+    --primary-color--red: rgb(169,32,46);
+    --backgroundColor-cream: rgb(248, 245, 241);
+    --button-color: rgb(255, 255, 255, 0.6);
+    --button-color-hover: rgb(255, 255, 255, 0.6);
     --color-white: white;
-    --color-sivel: rgb(179,184,182);
     --color-black: black;
-    --color-cream: rgb(248, 245, 241);
 }
 
 html {
@@ -106,13 +102,13 @@ html {
 
 body {
     font-family: 'Poppins', Helvetica, sans-serif;
-    background-color: var(--color-red);
+    background-color: var(--primary-color--red);
     font-style: normal;
     font-weight: 400;
     position: relative;
 }
 
-/* Header  */
+/* Mantiene el header fijo en la parte superior */
 
 .Header,
 .Header-wrapper--excursiones {
@@ -120,7 +116,7 @@ body {
     max-width: 1500px;
     border-radius: 20px;
     margin: auto;
-    position: sticky;
+    position: sticky; 
     top: 0.5rem;
     z-index: 1;
     display: flex;
@@ -129,8 +125,8 @@ body {
     align-items: center;
     font-weight: 600;
     padding: 0.5rem 1rem;
-    background-color: var(--color-cream);
-    border: 1px solid var(--color-red);
+    background-color: var(--backgroundColor-cream);
+    border: 1px solid var(--primary-color--red);
     box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -144,22 +140,22 @@ body {
 }
 
 .Logo-rojo {
-    color: var(--color-red);
+    color: var(--primary-color--red);
     font-size: 1.8em;
 
 }
 .Logo-dorado {
-    color: var(--color-golden);
+    color: var(--secondary-color-golden);
 }
 
 .Header-btn {
     font-size: 1.5rem;
     display: none;
-    color: var(--color-red);
+    color: var(--primary-color--red);
 }
 
 .Nav-ul {
-    color: var(--color-red);
+    color: var(--primary-color--red);
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -172,19 +168,20 @@ body {
 }
 
 .Nav-li:hover {
-    color: var(--color-golden);
+    color: var(--secondary-color-golden);
     transform: scale(1.1);
 }
 
-/* CSS común para todas las páginas */
+/* Estilos comunes para todas las páginas */
 
+/* Estilos para los bloques en común */
 .Barrio,
 .Bridges,
 .Sports,
 .Register-Form,
 .SanFrancisco,
 .Footer-Wrapper {
-    background-color: var(--color-cream);
+    background-color: var(--backgroundColor-cream);
     width: 90%;
     max-width: 1300px;
     padding: 2rem;
@@ -192,6 +189,7 @@ body {
     border-radius: 1.25rem;
 }
 
+/* Estilos para los títulos principales */
 .Bridges-h1,
 .Barrios-h1,
 .Carrousel-h1,
@@ -208,12 +206,15 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Efecto hover para los títulos principales.
+Se escalan al pasar el ratón */
 .Bridges-h1:hover,
 .Barrios-h1:hover,
 .Carrousel-h1:hover {
     transform: scale(1.1);
 }
 
+/* Estilos de grid para las secciones de Barrio y San Francisco */
 .Barrio,
 .SanFrancisco {
     display: grid;
@@ -228,12 +229,13 @@ body {
     align-items: center;
 }
 
+/* Estilos para los subtítulos h2 y h3 */
 .Barrio-h2,
 .SanFrancisco-h2,
 .Bridges-h2,
 .Sports-h3,
 .Register-h3 {
-    color: var(--color-golden);
+    color: var(--secondary-color-golden);
     font-size: 2.5em;
     font-weight: 600;
     padding: 0 0 1rem;
@@ -246,6 +248,7 @@ body {
     text-align: center;
 }
 
+/* Estilos para las imágenes */
 .Barrio-picture,
 .Excursiones-picture,
 .SanFrancisco-picture,
@@ -254,7 +257,8 @@ body {
     width: 100%;
 }
 
-.Barrio-img,
+/* Imagenes con bordes redondeados y ajuste de cover */
+.Bridges-img,
 .Excursiones-img,
 .SanFrancisco-img,
 .Sports-img,
@@ -275,6 +279,7 @@ body {
     border-radius: 20px;
 }
 
+/* Contenedor interno del carrousel */
 .Carrousel-container {
     width: 400%;
     display: grid;
@@ -283,9 +288,10 @@ body {
     box-shadow: 15px 9px 30px 6px rgba(0,0,0,0.61);
 }
 
+/* Estilos para las flechas del carrousel */
 .Carrousel-arrow {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     font-size: 2rem;
     height: 5rem;
@@ -296,9 +302,10 @@ body {
 }
 
 .Carrousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Posicionamiento de las flechas y butones del carrousel */
 .Carrousel-arrow--next {
     right: 0;
 }
@@ -308,7 +315,7 @@ body {
 }
 
 .Carrousel-span {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--button-color);
     transition: color 0.3s ease-in;
 }
 
@@ -316,6 +323,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* Estilos para los botones redondos del carrousel */
 .Carrousel-ul {
     width: 100%;
     position: absolute;
@@ -330,7 +338,7 @@ body {
 .Carrousel-btn {
     width: 1rem;
     height: 1rem;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--button-color);
     border-radius: 50%;
 }
 
@@ -339,42 +347,52 @@ body {
     transform: scale(1.1);
 }
 
+/* Posicionamiento del título principal dentro del carrousel */
 .Carrousel-h1 {
     position: absolute;
     bottom: 20px;
 }
 
-/* index.html cambio de orden de las celdas del grid */
-
+/* Cambio de orden de las celdas del grid */
 .SanFrancisco-Historia-picture {
     order: 1;
 }
 
+/* Estilos de los enlaces ancla */
 .SanFrancisco-btn {
-    background-color: var(--color-golden);
+    background-color: var(--secondary-color-golden);
     border-radius: 0.5rem;
-    color: var(--color-cream);
+    color: var(--backgroundColor-cream);
     padding: 0.5rem 1rem;
     margin: 1rem 0 0;
-    border: 1px solid var(--color-golden);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--secondary-color-golden);
     transition: background-color 500ms ease, color 500ms ease;
 }
 
-.SanFrancisco-span {
-    transform: rotate(45deg);
-    transition: transform 0.5s ease;
+/* El color del texto y el background del ancla cambian cuando el usuario pase el ratón sobre él. */
+.SanFrancisco-btn:hover {
+    background-color: var(--backgroundColor-cream);
+    color: var(--secondary-color-golden);
 }
-.SanFrancisco-span:hover {
+
+/* El contenido del span gira 45 grados cuando el usuario pase el ratón sobre él. */
+.SanFrancisco-span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.SanFrancisco-btn:hover .SanFrancisco-span {
     transform: rotate(0);
 }
 
-.SanFrancisco-btn:hover {
-    background-color: var(--color-cream);
-    color: var(--color-golden);
-}
-
-/* SPORTS Article */
-
+/* Estilos para el grid de deportes */
 .Sports-grid {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -388,6 +406,7 @@ body {
     align-items: center;
 }
 
+/* Reglas específicas para diferentes elementos dentro del grid de deportes */
 .Sports-grid > div:first-child {
     grid-column: span 3;
 }
@@ -414,14 +433,13 @@ body {
 }
 
 .Sports-p--title {
-    border-bottom: 1px solid var(--color-red);
-    color: var(--color-red);
+    border-bottom: 1px solid var(--primary-color--red);
+    color: var(--primary-color--red);
     font-weight: 500;
     margin: 0 0 0.3rem;
 }
 
-/* Register form */
-
+/* Estilos para el formulario de suscripción */
 .Register-Form {
     display: flex;
     flex-flow: column nowrap;
@@ -430,9 +448,10 @@ body {
 }
 
 .Register-Label {
-    color: var(--color-red);
+    color: var(--primary-color--red);
 }
 
+/* Estilos para todas las filas del formulario */
 .Register-Row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -441,10 +460,12 @@ body {
     gap: 2rem;
 }
 
+/* Alinea el texto a la derecha en la columna izquierda */
 .Register-ColumnLeft {
     text-align: right;
 }
 
+/* Alinea el texto a la izquierda en la columna derecha */
 .Register-ColumnRight {
     text-align: left;
 }
@@ -454,14 +475,15 @@ body {
 .Register-Textarea {
     width: 100%;
     border: 0;
-    border-bottom: 1px solid var(--color-golden);
-    background: var(--color-cream);
-    color: var(--color-golden);
+    border-bottom: 1px solid var(--secondary-color-golden);
+    background: var(--backgroundColor-cream);
+    color: var(--secondary-color-golden);
     outline: 0;
     padding: 0 0 0 0.3rem;
     margin: 0 0 1rem;
 }
 
+/* Estilos para opciones inválidas en el select */
 select:invalid {
     opacity: 0.5;
     font-size: 0.8rem;
@@ -472,13 +494,15 @@ select:invalid {
     line-height: 1.5em;
 }
 
+/* Estilos para los placeHolder de todos los inputs y textarea */
 .Register-Textarea::placeholder,
 .Register-Input::placeholder {
-    color: var(--color-golden);
+    color: var(--secondary-color-golden);
     font-size: 0.8rem;
     opacity: 0.5;
 }
 
+/* Contenedor para el checkbox */
 .Register-CheckboxWrapper {
     display: flex;
     align-items: center;
@@ -487,42 +511,44 @@ select:invalid {
 
 .Register-Checkbox {
     margin: 0 0.6rem 0 0;
-    accent-color: var(--color-golden)
+    accent-color: var(--secondary-color-golden)
 }
 
+/* Estilos para el botón enviar */
 .submit {
-    background-color: var(--color-golden);
+    background-color: var(--secondary-color-golden);
     border-radius: 0.5rem;
-    color: var(--color-cream);
+    color: var(--backgroundColor-cream);
     font-size: 20px;
     padding: 0.5rem 1rem;
     margin: 0.6rem;
-    border: 1px solid var(--color-golden);
+    border: 1px solid var(--secondary-color-golden);
     transition: background-color 500ms ease, color 500ms ease;
 }
 
+/* El color del texto y el background del botón cambian cuando el usuario pase el ratón sobre él. */
 .submit:hover {
-    background-color: var(--color-cream);
-    color: var(--color-golden);
+    background-color: var(--backgroundColor-cream);
+    color: var(--secondary-color-golden);
 }
 
-/* FOOTER */
-
+/* Estilos común para todos los pies de página */
 .Footer {
     width: 100%;
-    background-color: var(--color-cream);
+    background-color: var(--backgroundColor-cream);
     padding: 2rem 0;
 }
 
 .Footer-Wrapper {
     margin: 0 auto 0;
-    border: 1px solid var(--color-red);
+    border: 1px solid var(--primary-color--red);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
     align-items: center;
 }
 
+/* Estilos para el navegador del footer */
 .Footer-ul {
     display: flex;
     flex-flow: column nowrap;
@@ -532,16 +558,18 @@ select:invalid {
 }
 
 .Footer-li {
-    color: var(--color-red);
+    color: var(--primary-color--red);
     transition: transform 0.3s ease;
 }
 
+/* El contenido se escala cuando el usuario pase el ratón sobre él. */
 .Footer-li:hover {
     transform: scale(1.1)
 }
 
+/* Estilos para iconos de redes sociales */
 .Rrss {
-    border-bottom: 1px solid var(--color-golden);
+    border-bottom: 1px solid var(--secondary-color-golden);
     width: 134px;
     margin: auto;
 }
@@ -559,12 +587,13 @@ select:invalid {
     transition: transform 30ms ease;
 }
 
+/* El contenido se escala cuando el usuario pase el ratón sobre él. */
 .Rrss-img:hover {
     transform: scale(1.1);
 }
 
-/* puentes.html Bridge css code*/
 
+/* Estilos específicos para la página "puentes.html" */
 .Bridges {
     display: flex;
     flex-flow: column nowrap;
@@ -572,12 +601,14 @@ select:invalid {
     align-items: center;
 }
 
+/* Contenedor de la imagenes superiores */
 .Bridges-UpperWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
+/* Botones y texto que aprecen y desaparecen según se aprieten mediante JavaScript "puentes.js" */
 .Bridge-btns {
     display: flex;
     flex-flow: row nowrap;
@@ -588,9 +619,9 @@ select:invalid {
 
 .Bridge-button {
     width: 100%;
-    border-bottom: 1px solid var(--color-cream);
+    border-bottom: 1px solid var(--backgroundColor-cream);
     transition: border-bottom 0.3s ease-in;
-    color: var(--color-red);
+    color: var(--primary-color--red);
     font-weight: 500;
 }
 
@@ -598,38 +629,47 @@ select:invalid {
     padding: 1rem 0;
 }
 
+/* Estilos de los botones cuando la clase isActive está activada */
 .Bridge-button.isActive {
-    border-bottom: 1px solid var(--color-red);
+    border-bottom: 1px solid var(--primary-color--red);
 }
 
+/* Posicionamiento de los textos dentro de su contenedor */
 .Bridge-paragraphs {
     position: relative;
 }
 
 .Bridge-p {
     position: absolute;
-    opacity: 0;
+    opacity: 0;   /* Opacidad 0 o invisible */
     top: 0;
     transition: opacity 0.3s ease-in;
 }
 
+/* Posicion estática de uno de los elemntos para que ocupe el espacio correspondiente */
 .Bridge-p:first-child {
     position: static;
 }
 
+/* Estilos de los textos cuando la clase isActive está activada */
 .Bridge-p.isActive {
-    opacity: 1;
+    opacity: 1; /* Opacidad 1 o visible */
 }
 
-/* excursiones.html excursiones css code*/
 
+/* Estilos específicos para la página "excursiones.html" */
+
+/* Encabezado fijo a 0.5 rem del alto de la ventana */
 .Header-excursiones {
     width: 100%;
     position: fixed;
     top: 0.5rem;
     margin: 0 auto;
+    z-index: 1;
 }
 
+/* Estilos de la sección superior, la cual, va a tener una imagen como background fija y se 
+va a mover lentamente hacia abajo mediante JavaScript según el scroll "excursiones.js" */
 .Excursiones-background {
     width: 100%;
     height: 90vh;
@@ -640,6 +680,8 @@ select:invalid {
     background-attachment: fixed;
 }
 
+/* Posicionamiento del título principal que se va a mover rapidamente hacia abajo mediante 
+JavaScript según el scroll "excursiones.js" */
 .Excursiones-h1 {
     width: 100%;
     position: fixed;
@@ -648,10 +690,11 @@ select:invalid {
 
 .Excursiones {
     width: 100%;
-    background-color: var(--color-cream);
+    background-color: var(--backgroundColor-cream);
     padding: 1rem 0;
 }
 
+/* Reglas específicas para diferentes elementos dentro del grid de deportes */
 .Excursiones-grid {
     width: 90%;
     max-width: 1300px;
@@ -680,6 +723,8 @@ select:invalid {
     text-align: center;
 }
 
+/* Media queries para que la página sea responsive*/
+
 /* Dispositivos medianos (tablets en horizontal, más de 768px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .Carrousel-h1,
@@ -700,19 +745,17 @@ select:invalid {
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
 @media screen and (max-width: 767px) {
+    /* Cambio de tamaños de fuentes, margenes y paddings para las secciones correspondientes */
     .Barrio,
     .Sports,
     .Register-Form,
     .SanFrancisco,
-    .Footer-Wrapper {
+    .Footer-Wrapper,
+    .Excursiones-grid {
         width: 95%;
         padding: 1rem;
         margin: 0 auto 2rem;
         border-radius: 1.25rem;
-    }
-
-    Excursiones-grid{
-        margin: 0;
     }
 
     .Carrousel {
@@ -720,6 +763,7 @@ select:invalid {
         margin: 2rem auto 2rem;
     }
 
+    /* Cambio de tamaños de fuentes para títulos y subtítulos */
     .Carrousel-h1,
     .Excursiones-h1,
     .Bridges-h1,
@@ -735,6 +779,7 @@ select:invalid {
         font-size: 2em;
     }
 
+    /* Estilos para que se vea el botón hamburgesa y se esconda el menu de navegación */
     .Header-btn {
         display: block;
         padding: 0 1rem 0 0;
@@ -746,6 +791,8 @@ select:invalid {
         width: 100%;
     }
 
+    /* Al apretar el botón hamburgesa se activará y desactivara la clase isActive del menu de 
+    navegación mediante JavScript */
     .Header-nav.isActive {
         display: block;
     }
@@ -766,18 +813,20 @@ select:invalid {
         grid-template-columns: 1fr;
     }
 
+    /* Re-distrubucion del grid de la seccción sports */
     .Sports-grid {
         display: grid;
         grid-template-columns: repeat(5,1fr);
         gap: 1rem;
     }
     
-
-    .Excursiones-picture,
-    .Sports-picture {
+    .Bridge-img
+    .Excursiones-img,
+    .Sports-img {
         border-radius: 10px;
     }
 
+    /* Cambios de tamaños, margenes, paddings de la sección del formulario */
     .Register-Form {
         width: 95%;
         margin: 0 auto 2rem;
@@ -792,9 +841,10 @@ select:invalid {
         width: 100%;
     }
 
+    /* Cambios de tamaños, margenes, paddings de la sección footer */
     .Footer {
         width: 100%;
-        background-color: var(--color-cream);
+        background-color: var(--backgroundColor-cream);
         padding: 1rem 0;
     }
     
@@ -807,6 +857,7 @@ select:invalid {
 
 /* Dispositivos muy pequeños (teléfonos, de 600px o menos) */
 @media (max-width: 600px) {
+    /* Cambio de tamaños de fuentes para títulos y subtítulos */
     .SanFrancisco-h1,    
     .Excursiones-h1 {
         font-size: 2em;
@@ -824,6 +875,7 @@ select:invalid {
         margin: 1.5rem auto 2rem;
     }
 
+    /* Re-distrubucion del grid de la seccción sports */
     .Sports-grid {
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -848,9 +900,10 @@ select:invalid {
     }
     
     .Sports-p--title {
-        color: var(--color-red);
+        color: var(--primary-color--red);
     }
 
+    /* Cambios de display y margenesde la sección registro */
     .Register-Row {
         display: grid;
         grid-template-columns: 100%;
@@ -866,38 +919,13 @@ select:invalid {
         margin: 0 0 1rem;
     }
 
+    /* Cambios de display y margenesde la sección footer */
     .Footer-Wrapper {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
-    .Footer-ul {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .Footer-li {
-        color: var(--color-red);
-    }
-    
-    .Rrss {
-        border-bottom: 1px solid var(--color-golden);
-        width: 134px;
-        margin: auto;
-    }
 
-    .Rrss-img {
-        transition: transform 30ms ease;
-    }
-    
-    .Rrss-img:hover {
-        transform: scale(1.1);
-    }
-
+    /* Cambios de display y margenesde la sección excursiones */
     .Excursiones-grid {
         grid-template-columns: repeat(3,1fr);
         margin: 0 auto 0;

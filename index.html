@@ -8,12 +8,16 @@
     <title>San Francisco Bay Area</title>
 </head>
 <body>
+    <!-- Sección del Encabezado -->
     <header class="Header">
+        <!-- Logotipo -->
         <div class="Logo">
             <p class="Logo-rojo">San Francisco</p>
             <p class="Logo-dorado">Bay Area</p>
         </div>
+        <!-- Botón hamburgesa para el responsive -->
         <button class="Header-btn">&#9778;</button>
+        <!-- Menú de Navegación -->
         <nav class="Header-nav Nav">
             <ul class="Nav-ul">
                 <li class="Nav-li"><a href="index.html" class="Nav-a">Home</a></li>
@@ -23,6 +27,8 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <!-- Sección del Carrousel con imágenes -->
         <div class="Carrousel">
             <div class="Carrousel-container">
                 <img src="./assets/img-carrousell/carrousel-golden-gate-bridge-200x1125px-web.jpg" alt="GoldenGate Bridge" class="Carrousel-img">
@@ -30,12 +36,14 @@
                 <img src="./assets/img-carrousell/carrousel-san-francisco-panoramic-200x1125px-web.jpg" alt="San Francisco Panoramic" class="Carrousel-img">
                 <img src="./assets/img-carrousell/carrousel-teather-200x1125px-web.jpg" alt="Arts building" class="Carrousel-img">
             </div>
+            <!-- Botones de Navegación del Carrusel -->
             <button class="Carrousel-arrow Carrousel-arrow--next">
                 <span class="Carrousel-span">&gt;</span>
             </button>
             <button class="Carrousel-arrow Carrousel-arrow--prev">
                 <span class="Carrousel-span">&lt;</span>
             </button>
+            <!-- Botones inferiores redondos de Navegación del Carrusel -->
             <ul class="Carrousel-ul">
                 <li class="Carrousel-li">
                     <button class="Carrousel-btn"></button>
@@ -52,6 +60,7 @@
             </ul>
             <h1 class="Carrousel-h1">Visita San Francisco</h1>
         </div>
+        <!-- Sección de descripción general de San Francisco -->
         <section class="SanFrancisco">
             <picture class="SanFrancisco-picture">
                     <source srcset="#" media="(max-width:480px)">
@@ -63,6 +72,7 @@
                 <a href="#Register-Form" class="SanFrancisco-btn">Saber <span class="SanFrancisco-span">+</span></a>
             </div>
         </section>
+        <!-- Sección de la Historia de San Francisco -->
         <section class="SanFrancisco SanFrancisco-Historia">
             <picture class="SanFrancisco-picture SanFrancisco-Historia-picture">
                     <source srcset="#" media="(max-width:480px)">
@@ -74,8 +84,10 @@
                 <a href="#Register-Form" class="SanFrancisco-btn">Saber <span class="SanFrancisco-span">+</span></a>
             </div>
         </section>
+        <!-- Sección de los deportes más populares de San Francisco -->
         <article class="Sports">
             <h3 class="Sports-h3">Los deportes más populares</h3>
+            <!-- Contenedor grid de 6 bloques de la sección de deportes -->
             <div class="Sports-grid">
                 <div class="Sports-div">
                     <picture class="Sports-picture">
@@ -109,10 +121,11 @@
                 </div>
             </div>
         </article>
+        <!-- Formulario de suscripción -->
         <form id="Register-Form" class="Register-Form" method="GET" action="#">
             <h3 class="Register-h3">Suscribete para más información</h3>
             <div class="Form-Wrapper">
-                <!-- First Name -->
+                <!-- Secciones input del nombre, apellidos, email y edad -->
                 <div class="Register-Row">
                     <div class="Register-ColumnLeft">
                         <label class="Register-Label Register-Label--name" for="name">
@@ -120,11 +133,10 @@
                         </label>
                     </div>
                     <div class="Register-ColumnRight">
-                        <input type="text" class="Register-Input" id="name" name="name" autofocus
+                        <input type="text" class="Register-Input" id="name" name="name"
                             placeholder="Escribe tu nombre" required>
                     </div>
                 </div>
-                    <!-- Lastname -->
                     <div class="Register-Row">
                         <div class="Register-ColumnLeft">
                             <label class="Register-Label Register-Label--lastname" for="lastname">
@@ -132,11 +144,10 @@
                             </label>
                         </div>
                         <div class="Register-ColumnRight">
-                            <input type="text" class="Register-Input" id="lastname" name="lastname" autofocus
+                            <input type="text" class="Register-Input" id="lastname" name="lastname" 
                                 placeholder="Escribe tu apellido" required>
                         </div>
                     </div>
-                <!-- Email -->
                 <div class="Register-Row">
                     <div class="Register-ColumnLeft">
                         <label class="Register-Label Register-Label--email" for="email">
@@ -148,7 +159,6 @@
                             required>
                     </div>
                 </div>
-                <!-- Age -->
                 <div class="Register-Row">
                     <div class="Register-ColumnLeft">
                         <label class="Register-Label Register-Label--age" for="age">
@@ -159,7 +169,7 @@
                         <input type="number" class="Register-Input" id="number" name="age" min="13" max="125" Placeholder="Edad">
                     </div>
                 </div>
-                <!-- Drop Down -->
+                <!-- Sección select -->
                 <div class="Register-Row">
                     <div class="Register-ColumnLeft">
                         <label class="Register-Label Register-Label--comentarios" for="zone">
@@ -176,7 +186,7 @@
                         </select>
                     </div>
                 </div>
-                <!-- Comment section --->
+                <!-- Sección de comentarios --->
                 <div class="Register-Row">
                     <div class="Register-ColumnLeft">
                         <label class="Register-Label Register-Label--Textarea" for="comments">
@@ -184,25 +194,26 @@
                         </label>
                     </div>
                     <div class="Register-ColumnRight">
-                        <textarea placeholder="Escribe tus comentarios..." class="Register-Textarea"></textarea>
+                        <textarea placeholder="Escribe tus comentarios..." class="Register-Textarea" id="comments" name="comments"></textarea>
                     </div>
                 </div>
             </div>
-            <!-- Checkbox -->
+            <!-- Sección de terminos y condiciones  --->
             <div class="Register-CheckboxWrapper">
-                <input type="checkbox" class="Register-Checkbox" id="checkbox" name="checkbox" autofocus
-                    required>
+                <input type="checkbox" class="Register-Checkbox" id="checkbox" name="checkbox" required>
                 <label class="Register-Label Register-Label--checkbox" for="checkbox">
                     * Terminos y condiciones
                 </label>
             </div>
-            <!-- submit the form -->
+            <!-- Botón submit para enciar el formulario --->
             <button class="submit" type="submit">
                 Enviar
             </button>
         </form>
-
+    </main>
+        <!-- Sección común para todas la página del pie de página -->
         <footer class="Footer">
+            <!-- Logotipo -->
             <div class="Footer-Wrapper">
                 <div class="Footer-Logo">
                     <div class="Logo">
@@ -210,6 +221,7 @@
                         <p class="Logo-dorado">Bay Area</p>
                     </div>
                 </div>
+                <!-- Menú de navegación en el footer -->
                 <div class="Footer-menu">
                     <ul class="Footer-ul">
                         <li class="Footer-li"><a href="./index.html">Home</a></li>
@@ -218,7 +230,7 @@
                         <li class="Footer-li"><a href="./excursiones.html">Excursiones</a></li>
                     </ul>
                 </div>
-
+                <!-- Menú de navegación de las redes sociales -->
                 <div class="footer-Rrss Rrss">
                     <ul class="Rrss-ul">
                         <li class="Rrss-li">
@@ -245,6 +257,5 @@
                 </div>
             </div>
         </footer>
-    </main>
 </body>
 </html>

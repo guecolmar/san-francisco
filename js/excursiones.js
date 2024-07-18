@@ -1,18 +1,18 @@
 `use strict`
 
-// HEADER 
-const header = document.querySelector('.Header-excursiones')
+// Seleccionamos el elemento del encabezado 
+const header = document.querySelector('.Header')
+// Seleccionamos el botón y el elemento navegador que están dentro del encabezado
 const headerBtn = header.querySelector('.Header-btn')
 const headerNav = header.querySelector('.Header-nav')
 
-headerBtn.addEventListener('click', () => {
+// Añadimos un evento de clic al botón del encabezado que activa y desactiva la clase isActive
+headerBtn.addEventListener('click', () => 
     headerNav.classList.toggle('isActive')
-})
+)
 
-// Selecciona el elemento con la clase 'Excursiones-background'
+// Selecciona el elementos del background y del título
 const excursionesBackGround = document.querySelector('.Excursiones-background')
-
-// Selecciona el elemento con la clase 'Excursiones-h1'
 const excursionesH1 = document.querySelector('.Excursiones-h1')
 
 // Función que aplica el efecto parallax
@@ -34,16 +34,3 @@ const parallax = () => {
 window.addEventListener('scroll', () => {
     parallax()
 })
-
-
-const excursionesWrappers = document.querySelectorAll('.Excursiones-wrapper');
-
-excursionesWrappers.forEach(wrapper => {
-    wrapper.addEventListener('mouseenter', () => {
-        wrapper.querySelector('.Excursiones-span').classList.add('active');
-    });
-
-    wrapper.addEventListener('mouseleave', () => {
-        wrapper.querySelector('.Excursiones-span').classList.remove('active');
-    });
-});

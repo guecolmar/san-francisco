@@ -724,19 +724,21 @@ JavaScript según el scroll "excursiones.js" */
     position: absolute;
     bottom: -100%;
     text-align: center;
-    transition: bottom 0.5s ease;
+    opacity: 0;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
     text-shadow: 0px 0px 4px var(--color-black);
 }
 
 /* El texto/span se mueve hacia arriba hasta el centro de la imagen cuando el usuario pase el ratón sobre él. */
 .Excursiones-wrapper:hover .Excursiones-span {
     bottom: 30%;  /* Mueve el texto hacia arriba hasta el centro de la imagen */
+    opacity: 1;
 }
 
 /* Media queries para que la página sea responsive*/
 
 /* Dispositivos medianos (ordenadores pequeños) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .Carrousel-h1,
     .Excursiones-h1,
     .Bridges-h1,
@@ -788,7 +790,7 @@ JavaScript según el scroll "excursiones.js" */
 }
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
-@media (min-width: 600px) and (max-width: 767px) {
+@media (max-width: 767px) {
     /* Cambio de tamaños de fuentes, margenes y paddings para las secciones correspondientes */
     .Barrio,
     .Sports,
@@ -876,35 +878,10 @@ JavaScript según el scroll "excursiones.js" */
     /* Re-distrubucion del grid de la seccción sports */
     .Sports-grid > div:first-child {
         grid-column: span 2;
-        order: 1;
     }
     
     .Sports-div:nth-child(2) {
         grid-column: span 3;
-        order: 2;
-    }
-    
-    .Sports-div:nth-child(3) {
-        grid-row: span 2;
-        grid-column: span 1;
-        order: 4;
-    }
-    
-    .Sports-div:nth-child(4) {
-        grid-row: span 2;
-        grid-column: span 4;
-        order: 3;
-    }
-    
-    .Sports-div:nth-child(5) {
-        grid-column: span 2;
-        order: 5;
-    }
-
-    .Sports-div:nth-child(6) {
-        grid-row: span 2;
-        grid-column: span 3;
-        order: 6;
     }
 
     /* Cambios de tamaños, margenes, paddings de la sección del formulario */
@@ -942,10 +919,12 @@ JavaScript según el scroll "excursiones.js" */
 
 /* Dispositivos muy pequeños (teléfonos, de 600px o menos) */
 @media (max-width: 600px) {
-    /* Cambio de tamaños de fuentes para títulos y subtítulos */
-    .SanFrancisco-h1,    
-    .Excursiones-h1 {
-        font-size: 2em;
+    /* Cambio de tamaños de fuentes para títulos, subtítulos y textos */
+    .Carrousel-h1,
+    .Excursiones-h1,
+    .Bridges-h1,
+    .Barrios-h1 {
+        font-size: 1.8em;
     }
 
     .Barrio-h2,
@@ -953,7 +932,27 @@ JavaScript según el scroll "excursiones.js" */
     .Bridges-h2,
     .Sports-h3,
     .Register-h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
+    }
+
+    .Barrio-p,
+    .SanFrancisco-p,
+    .Sports-p {
+        font-size: .75rem;
+    }
+
+    /* Cambio de orden de las celdas del grid */
+    .SanFrancisco-Historia-picture {
+        order: 0;
+    }
+
+
+    /* Estilos de grid para las secciones de Barrio y San Francisco */
+    .Barrio,
+    .SanFrancisco {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .Carrousel {
@@ -980,6 +979,10 @@ JavaScript según el scroll "excursiones.js" */
     .Footer-Wrapper {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .Barrio {
+        grid-template-columns: 1fr;
     }
 
     /* Cambios de display y margenesde la sección excursiones */

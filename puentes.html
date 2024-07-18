@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <!-- Sección del Encabezado -->
     <header class="Header">
+        <!-- Logotipo -->
         <div class="Logo">
             <p class="Logo-rojo">San Francisco</p>
             <p class="Logo-dorado">Bay Area</p>
         </div>
+        <!-- Botón hamburgesa para el responsive -->
         <button class="Header-btn">&#9778;</button>
+        <!-- Menú de Navegación -->
         <nav class="Header-nav Nav">
             <ul class="Nav-ul">
                 <li class="Nav-li"><a href="index.html" class="Nav-a">Home</a></li>
@@ -28,11 +32,11 @@
         <section class="Bridges">
             <div class="Bridges-UpperWrapper">
                 <picture class="Bridges-picture">
-                        <source srcset="#" media="(max-width:480px)">
+                        <source srcset="./assets/img-puentes/bridge-golden-gate-220x138px-web.jpg" media="(max-width:600px)">
                         <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
                 </picture>
                 <picture class="Bridges-picture">
-                    <source srcset="#" media="(max-width:480px)">
+                    <source srcset="./assets/img-puentes/bridge-golden-gate-night-220x138px-web.jpg" media="(max-width:600px)">
                     <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-night-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
                 </picture> 
             </div>
@@ -41,14 +45,18 @@
                 <div class="Bridge">
                     <div class="Bridge-wrapper">
                         <div class="Bridge-btns">
-                            <button class="Bridge-button isActive">Descripción</button>
-                            <button class="Bridge-button">Historia</button>
+                            <button class="Bridge-button isActive">Historia</button>
+                            <button class="Bridge-button">Descripción</button>
                             <button class="Bridge-button">Detalles</button>
                         </div>
                         <div class="Bridge-paragraphs">
-                            <p class="Bridge-p isActive">Ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi similique perspiciatis id soluta, consectetur iusto inventore nam odio accusamus error quo vitae quaerat totam incidunt voluptas qui libero cum in harum dolorem! Amet accusantium explicabo culpa facilis autem similique nemo aliquam dicta eaque nihil dolor deserunt rerum, aliquid mollitia!</p>
-                            <p class="Bridge-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit temporibus atque mollitia harum sint dolor eos natus minima aut?</p>
-                            <p class="Bridge-p">Dolor, sit amet consectetur adipisicing elit. Repudiandae perspiciatis nihil provident illum fugiat iure blanditiis, assumenda iste id cum quibusdam totam molestiae voluptates, natus animi molestias a itaque fuga!</p>
+                            <p class="Bridge-p isActive">Inaugurado el 27 de mayo de 1937, el puente fue diseñado por el ingeniero Joseph Strauss, con la colaboración de Irving Morrow en el diseño arquitectónico y Charles Alton Ellis en la ingeniería estructural. Su construcción supuso un hito en la ingeniería civil y una solución a los problemas de transporte entre San Francisco y las comunidades del norte.</p>
+                            <p class="Bridge-p ">El Puente Golden Gate se extiende sobre el estrecho homónimo, que conecta la Bahía de San Francisco con el Océano Pacífico. Une la ciudad de San Francisco, al norte de la península de San Francisco, con el condado de Marin.</p>
+                            <ul class="Bridge-p">
+                                <li>Longitud Total: Aproximadamente 2,737 metros</li>
+                                <li>Altura: Las torres del puente alcanzan una altura de 227 metros</li>
+                                <li>Materiales: Construido principalmente de acero.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -57,11 +65,11 @@
         <section class="Bridges">
             <div class="Bridges-UpperWrapper">
                 <picture class="Bridges-picture">
-                        <source srcset="#" media="(max-width:480px)">
+                        <source srcset="./assets/img-puentes/bridge-bay-bridge-night-220x138px-web.jpg" media="(max-width:600px)">
                         <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-night-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
                 </picture>
                 <picture class="Bridges-picture">
-                    <source srcset="#" media="(max-width:480px)">
+                    <source srcset="./assets/img-puentes/bridge-bay-bridge-220x138px-web.jpg" media="(max-width:600px)">
                     <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
                 </picture> 
             </div>
@@ -70,15 +78,19 @@
                 <div class="Bridge">
                     <div class="Bridge-wrapper">
                         <div class="Bridge-btns">
-                            <button class="Bridge-button isActive">Descripción</button>
-                            <button class="Bridge-button">Historia</button>
+                            <button class="Bridge-button isActive">Historia</button>
+                            <button class="Bridge-button">Descripción</button>
                             <button class="Bridge-button">Detalles</button>
                         </div>
-                        <div class="Bridge-paragraphs">
-                            <p class="Bridge-p isActive">Ipsum dolor sit amet consectetur adipisicing elit. Architecto nisi similique perspiciatis id soluta, consectetur iusto inventore nam odio accusamus error quo vitae quaerat totam incidunt voluptas qui libero cum in harum dolorem! Amet accusantium explicabo culpa facilis autem similique nemo aliquam dicta eaque nihil dolor deserunt rerum, aliquid mollitia!</p>
-                            <p class="Bridge-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit temporibus atque mollitia harum sint dolor eos natus minima aut?</p>
-                            <p class="Bridge-p">Dolor, sit amet consectetur adipisicing elit. Repudiandae perspiciatis nihil provident illum fugiat iure blanditiis, assumenda iste id cum quibusdam totam molestiae voluptates, natus animi molestias a itaque fuga!</p>
-                        </div>
+                        <ul class="Bridge-paragraphs">
+                            <p class="Bridge-p isActive">Inaugurado el 12 de noviembre de 1936, el Bay Bridge fue diseñado para proporcionar una conexión crucial entre las dos ciudades, facilitando el tráfico vehicular y ferroviario en una época de rápido crecimiento económico y urbano en la región. Su construcción precedió a la del Golden Gate por menos de un año.</p>
+                            <p class="Bridge-p">El Puente de la Bahía de San Francisco-Oakland, conocido comúnmente como Bay Bridge, conecta las ciudades de San Francisco y Oakland en el estado de California, atravesando la bahía de San Francisco.</p>
+                            <ul class="Bridge-p">
+                                <li>Longitud Total: Aproximadamente 7.18 kilómetros</li>
+                                <li>Altura: Alcanzan una altura de 160 metros</li>
+                                <li>Materiales: Principalmente acero y hormigón.</li>
+                            </ul>
+                            </div>
                     </div>
                 </div>
             </div>

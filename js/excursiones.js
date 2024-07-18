@@ -34,3 +34,16 @@ const parallax = () => {
 window.addEventListener('scroll', () => {
     parallax()
 })
+
+
+const excursionesWrappers = document.querySelectorAll('.Excursiones-wrapper');
+
+excursionesWrappers.forEach(wrapper => {
+    wrapper.addEventListener('mouseenter', () => {
+        wrapper.querySelector('.Excursiones-span').classList.add('active');
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+        wrapper.querySelector('.Excursiones-span').classList.remove('active');
+    });
+});

@@ -246,6 +246,7 @@ Se escalan al pasar el ratón */
 .SanFrancisco-p,
 .Sports-p {
     text-align: center;
+    font-size: 1rem;
 }
 
 /* Estilos para las imágenes */
@@ -435,7 +436,6 @@ Se escalan al pasar el ratón */
 .Sports-p--title {
     border-bottom: 1px solid var(--primary-color--red);
     color: var(--primary-color--red);
-    font-weight: 500;
     margin: 0 0 0.3rem;
 }
 
@@ -562,7 +562,7 @@ select:invalid {
     transition: transform 0.3s ease;
 }
 
-/* El contenido se escala cuando el usuario pase el ratón sobre él. */
+/* El contenido se hace mas grande cuando el usuario pase el ratón sobre él. */
 .Footer-li:hover {
     transform: scale(1.1)
 }
@@ -587,7 +587,7 @@ select:invalid {
     transition: transform 30ms ease;
 }
 
-/* El contenido se escala cuando el usuario pase el ratón sobre él. */
+/* El contenido se hace más grande cuando el usuario pase el ratón sobre él. */
 .Rrss-img:hover {
     transform: scale(1.1);
 }
@@ -646,7 +646,7 @@ select:invalid {
     transition: opacity 0.3s ease-in;
 }
 
-/* Posicion estática de uno de los elemntos para que ocupe el espacio correspondiente */
+/* Posicion estática de uno de los elementos para que ocupe el espacio correspondiente */
 .Bridge-p:first-child {
     position: static;
 }
@@ -711,22 +711,32 @@ JavaScript según el scroll "excursiones.js" */
     transition: transform 0.5s ease;
 }
 
+/* El contenido se escala más pequeño cuando el usuario pase el ratón sobre él. */
 .Excursiones-wrapper:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
 }
 
+/* Estilos y posicionamiento del texto de cada imagen fuera de la vista */
 .Excursiones-span {
     color: var(--color-white);
+    font-size: 1.5em;
     width: 100%;
     position: absolute;
-    bottom: 10px;
+    bottom: -100%;
     text-align: center;
+    transition: bottom 0.5s ease;
+    text-shadow: 0px 0px 4px var(--color-black);
+}
+
+/* El texto/span se mueve hacia arriba hasta el centro de la imagen cuando el usuario pase el ratón sobre él. */
+.Excursiones-wrapper:hover .Excursiones-span {
+    bottom: 30%;  /* Mueve el texto hacia arriba hasta el centro de la imagen */
 }
 
 /* Media queries para que la página sea responsive*/
 
-/* Dispositivos medianos (tablets en horizontal, más de 768px) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Dispositivos medianos (ordenadores pequeños) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .Carrousel-h1,
     .Excursiones-h1,
     .Bridges-h1,
@@ -740,11 +750,45 @@ JavaScript según el scroll "excursiones.js" */
     .Sports-h3,
     .Register-h3 {
         font-size: 2.5em;
+    }        
+    
+    /* Re-distrubucion del grid de la seccción sports */
+    .Sports-grid > div:first-child {
+        grid-column: span 3;
+        order: 1;
+    }
+    
+    .Sports-div:nth-child(2) {
+        grid-column: span 2;
+        order: 2;
+    }
+    
+    .Sports-div:nth-child(3) {
+        grid-row: span 2;
+        grid-column: span 1;
+        order: 4;
+    }
+    
+    .Sports-div:nth-child(4) {
+        grid-row: span 2;
+        grid-column: span 4;
+        order: 3;
+    }
+    
+    .Sports-div:nth-child(5) {
+        grid-column: span 2;
+        order: 5;
+    }
+
+    .Sports-div:nth-child(6) {
+        grid-row: span 2;
+        grid-column: span 3;
+        order: 6;
     }
 }
 
 /* Dispositivos pequeños (tablets en vertical y teléfonos grandes, más de 600px) */
-@media screen and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
     /* Cambio de tamaños de fuentes, margenes y paddings para las secciones correspondientes */
     .Barrio,
     .Sports,
@@ -763,7 +807,7 @@ JavaScript según el scroll "excursiones.js" */
         margin: 2rem auto 2rem;
     }
 
-    /* Cambio de tamaños de fuentes para títulos y subtítulos */
+    /* Cambio de tamaños de fuentes para títulos, subtítulos y textos */
     .Carrousel-h1,
     .Excursiones-h1,
     .Bridges-h1,
@@ -777,6 +821,16 @@ JavaScript según el scroll "excursiones.js" */
     .Sports-h3,
     .Register-h3 {
         font-size: 2em;
+    }
+
+    .Barrio-p,
+    .SanFrancisco-p,
+    .Sports-p {
+        font-size: .875rem;
+    }
+
+    .Excursiones-span {
+        font-size: 1em;
     }
 
     /* Estilos para que se vea el botón hamburgesa y se esconda el menu de navegación */
@@ -812,18 +866,45 @@ JavaScript según el scroll "excursiones.js" */
     .Barrio {
         grid-template-columns: 1fr;
     }
-
-    /* Re-distrubucion del grid de la seccción sports */
-    .Sports-grid {
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        gap: 1rem;
-    }
     
     .Bridge-img
     .Excursiones-img,
     .Sports-img {
         border-radius: 10px;
+    }
+
+    /* Re-distrubucion del grid de la seccción sports */
+    .Sports-grid > div:first-child {
+        grid-column: span 2;
+        order: 1;
+    }
+    
+    .Sports-div:nth-child(2) {
+        grid-column: span 3;
+        order: 2;
+    }
+    
+    .Sports-div:nth-child(3) {
+        grid-row: span 2;
+        grid-column: span 1;
+        order: 4;
+    }
+    
+    .Sports-div:nth-child(4) {
+        grid-row: span 2;
+        grid-column: span 4;
+        order: 3;
+    }
+    
+    .Sports-div:nth-child(5) {
+        grid-column: span 2;
+        order: 5;
+    }
+
+    .Sports-div:nth-child(6) {
+        grid-row: span 2;
+        grid-column: span 3;
+        order: 6;
     }
 
     /* Cambios de tamaños, margenes, paddings de la sección del formulario */
@@ -839,6 +920,10 @@ JavaScript según el scroll "excursiones.js" */
 
     .Register-Textarea {
         width: 100%;
+    }
+
+    .Excursiones-span {
+        font-size: 1em;
     }
 
     /* Cambios de tamaños, margenes, paddings de la sección footer */
@@ -874,35 +959,7 @@ JavaScript según el scroll "excursiones.js" */
     .Carrousel {
         margin: 1.5rem auto 2rem;
     }
-
-    /* Re-distrubucion del grid de la seccción sports */
-    .Sports-grid {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .Sports-grid > div:first-child {
-        grid-column: span 2;
-    }
     
-    .Sports-div:nth-child(2) {
-        grid-column: span 2;
-    }
-    
-    .Sports-div:nth-child(3) {
-        grid-row: span 2;
-        grid-column: span 1;
-    }
-    
-    .Sports-div:nth-child(4) {
-        grid-row: span 2;
-        grid-column: span 1;
-    }
-    
-    .Sports-p--title {
-        color: var(--primary-color--red);
-    }
-
     /* Cambios de display y margenesde la sección registro */
     .Register-Row {
         display: grid;

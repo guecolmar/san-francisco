@@ -485,7 +485,6 @@ Se escalan al pasar el ratón */
 
 /* Estilos para opciones inválidas en el select */
 select:invalid {
-    opacity: 0.5;
     font-size: 0.8rem;
     padding: 0;
 }
@@ -499,7 +498,6 @@ select:invalid {
 .Register-Input::placeholder {
     color: var(--secondary-color-golden);
     font-size: 0.8rem;
-    opacity: 0.5;
 }
 
 /* Contenedor para el checkbox */
@@ -543,7 +541,7 @@ select:invalid {
 /* Estilos para la animación del svg del footer. Markee */
 .Car {
     position: absolute;
-    top: -40px;
+    top: -50px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;

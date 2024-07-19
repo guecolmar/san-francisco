@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="./js/puentes.js" defer></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- Sección del Encabezado -->
     <header class="Header">
@@ -28,69 +30,123 @@
         </nav>
     </header>
     <main>
+        <!-- Título principal de la página -->
         <h1 class="Bridges-h1">Puentes de San Francisco</h1>
+        <!-- Sección Bridges común para toda la página -->
         <section class="Bridges">
+            <!-- Contenedor superior para las imágenes del puente -->
             <div class="Bridges-UpperWrapper">
                 <picture class="Bridges-picture">
-                        <source srcset="./assets/img-puentes/bridge-golden-gate-220x138px-web.jpg" media="(max-width:600px)">
-                        <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
+                    <source srcset="./assets/img-puentes/bridge-golden-gate-220x138px-web.jpg"
+                        media="(max-width:600px)">
+                    <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-800x500-web.jpg"
+                        alt="Calle de San Francisco" loading="lazy">
                 </picture>
                 <picture class="Bridges-picture">
-                    <source srcset="./assets/img-puentes/bridge-golden-gate-night-220x138px-web.jpg" media="(max-width:600px)">
-                    <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-night-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
-                </picture> 
+                    <source srcset="./assets/img-puentes/bridge-golden-gate-night-220x138px-web.jpg"
+                        media="(max-width:600px)">
+                    <img class="Bridges-img" src="./assets/img-puentes/bridge-golden-gate-night-800x500-web.jpg"
+                        alt="Calle de San Francisco" loading="lazy">
+                </picture>
             </div>
+            <!-- Contenedor inferior con la información del puente -->
             <div class="Bridges-LowerWrapper">
                 <h2 class="Bridges-h2">Golden Gate Bridge</h2>
                 <div class="Bridge">
                     <div class="Bridge-wrapper">
+                        <!-- Botones para cambiar entre las secciones de información -->
                         <div class="Bridge-btns">
                             <button class="Bridge-button isActive">Historia</button>
                             <button class="Bridge-button">Descripción</button>
                             <button class="Bridge-button">Detalles</button>
                         </div>
+                        <!-- Contenedor para los párrafos de información -->
                         <div class="Bridge-paragraphs">
-                            <p class="Bridge-p isActive">Inaugurado el 27 de mayo de 1937, el puente fue diseñado por el ingeniero Joseph Strauss, con la colaboración de Irving Morrow en el diseño arquitectónico y Charles Alton Ellis en la ingeniería estructural. Su construcción supuso un hito en la ingeniería civil y una solución a los problemas de transporte entre San Francisco y las comunidades del norte.</p>
-                            <p class="Bridge-p ">El Puente Golden Gate se extiende sobre el estrecho homónimo, que conecta la Bahía de San Francisco con el Océano Pacífico. Une la ciudad de San Francisco, al norte de la península de San Francisco, con el condado de Marin.</p>
-                            <ul class="Bridge-p">
-                                <li>Longitud Total: Aproximadamente 2,737 metros</li>
-                                <li>Altura: Las torres del puente alcanzan una altura de 227 metros</li>
-                                <li>Materiales: Construido principalmente de acero.</li>
-                            </ul>
+                            <div class="Bridge-div isActive">
+                                <p class="Bridge-p">Inaugurado el 12 de noviembre de 1936, el Bay Bridge fue diseñado
+                                    para proporcionar una conexión crucial entre las dos ciudades, facilitando el
+                                    tráfico vehicular y ferroviario en una época de rápido crecimiento económico y
+                                    urbano en la región. Su construcción precedió a la del Golden Gate por menos de un
+                                    año.</p>
+                            </div>
+                            <div class="Bridge-div">
+                                <p class="Bridge-p">El Puente de la Bahía de San Francisco-Oakland, conocido comúnmente
+                                    como Bay Bridge, conecta las ciudades de San Francisco y Oakland en el estado de
+                                    California, atravesando la bahía de San Francisco.</p>
+                            </div>
+                            <div class="Bridge-div">
+                                <ul>
+                                    <li>
+                                        <p class="Bridge-p"><b>Longitud Total:</b> Aproximadamente 7.18 kilómetros</p>
+                                    </li>
+                                    <li>
+                                        <p class="Bridge-p"><b>Altura:</b> Alcanzan una altura de 160 metros</p>
+                                    </li>
+                                    <li>
+                                        <p class="Bridge-p"><b>Materiales:</b> Principalmente acero y hormigón</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Sección (idéntica estructura a la anterior) -->
         <section class="Bridges">
+            <!-- Contenedor superior para las imágenes del puente -->
             <div class="Bridges-UpperWrapper">
                 <picture class="Bridges-picture">
-                        <source srcset="./assets/img-puentes/bridge-bay-bridge-night-220x138px-web.jpg" media="(max-width:600px)">
-                        <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-night-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
+                    <source srcset="./assets/img-puentes/bridge-bay-bridge-night-220x138px-web.jpg"
+                        media="(max-width:600px)">
+                    <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-night-800x500-web.jpg"
+                        alt="Calle de San Francisco" loading="lazy">
                 </picture>
                 <picture class="Bridges-picture">
                     <source srcset="./assets/img-puentes/bridge-bay-bridge-220x138px-web.jpg" media="(max-width:600px)">
-                    <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-800x500-web.jpg" alt="Calle de San Francisco" loading="lazy">
-                </picture> 
+                    <img class="Bridges-img" src="./assets/img-puentes/bridge-bay-bridge-800x500-web.jpg"
+                        alt="Calle de San Francisco" loading="lazy">
+                </picture>
             </div>
+            <!-- Contenedor inferior con la información del puente -->
             <div class="Bridges-LowerWrapper">
                 <h2 class="Bridges-h2">Golden Gate Bridge</h2>
                 <div class="Bridge">
                     <div class="Bridge-wrapper">
+                        <!-- Botones para cambiar entre las secciones de información -->
                         <div class="Bridge-btns">
                             <button class="Bridge-button isActive">Historia</button>
                             <button class="Bridge-button">Descripción</button>
                             <button class="Bridge-button">Detalles</button>
                         </div>
-                        <ul class="Bridge-paragraphs">
-                            <p class="Bridge-p isActive">Inaugurado el 12 de noviembre de 1936, el Bay Bridge fue diseñado para proporcionar una conexión crucial entre las dos ciudades, facilitando el tráfico vehicular y ferroviario en una época de rápido crecimiento económico y urbano en la región. Su construcción precedió a la del Golden Gate por menos de un año.</p>
-                            <p class="Bridge-p">El Puente de la Bahía de San Francisco-Oakland, conocido comúnmente como Bay Bridge, conecta las ciudades de San Francisco y Oakland en el estado de California, atravesando la bahía de San Francisco.</p>
-                            <ul class="Bridge-p">
-                                <li>Longitud Total: Aproximadamente 7.18 kilómetros</li>
-                                <li>Altura: Alcanzan una altura de 160 metros</li>
-                                <li>Materiales: Principalmente acero y hormigón.</li>
-                            </ul>
+                        <!-- Contenedor para los párrafos de información -->
+                        <div class="Bridge-paragraphs">
+                            <div class="Bridge-div isActive">
+                                <p class="Bridge-p">Inaugurado el 12 de noviembre de 1936, el Bay Bridge fue diseñado
+                                    para proporcionar una conexión crucial entre las dos ciudades, facilitando el
+                                    tráfico vehicular y ferroviario en una época de rápido crecimiento económico y
+                                    urbano en la región. Su construcción precedió a la del Golden Gate por menos de un
+                                    año.</p>
                             </div>
+                            <div class="Bridge-div">
+                                <p class="Bridge-p">El Puente de la Bahía de San Francisco-Oakland, conocido comúnmente
+                                    como Bay Bridge, conecta las ciudades de San Francisco y Oakland en el estado de
+                                    California, atravesando la bahía de San Francisco.</p>
+                            </div>
+                            <div class="Bridge-div">
+                                <ul>
+                                    <li>
+                                        <p class="Bridge-p"><b>Longitud Total:</b> Aproximadamente 7.18 kilómetros</p>
+                                    </li>
+                                    <li>
+                                        <p class="Bridge-p"><b>Altura:</b> Alcanzan una altura de 160 metros</p>
+                                    </li>
+                                    <li>
+                                        <p class="Bridge-p"><b>Materiales:</b> Principalmente acero y hormigón</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,4 +195,5 @@
         </div>
     </footer>
 </body>
+
 </html>

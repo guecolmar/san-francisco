@@ -534,9 +534,33 @@ select:invalid {
 
 /* Estilos común para todos los pies de página */
 .Footer {
+    position: relative;
     width: 100%;
     background-color: var(--backgroundColor-cream);
     padding: 2rem 0;
+}
+
+/* Estilos para la animación del svg del footer. Markee */
+.Car {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.Car-slide {
+    width: 200%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    animation: car 8s linear reverse infinite;
+}
+
+.Car-img {
+    width: 4rem;
+    font-size: 2vw;
+    padding: 1vw 0;
 }
 
 .Footer-Wrapper {
@@ -639,7 +663,7 @@ select:invalid {
     position: relative;
 }
 
-.Bridge-p {
+.Bridge-div {
     position: absolute;
     opacity: 0;   /* Opacidad 0 o invisible */
     top: 0;
@@ -647,12 +671,12 @@ select:invalid {
 }
 
 /* Posicion estática de uno de los elementos para que ocupe el espacio correspondiente */
-.Bridge-p:first-child {
+.Bridge-div:first-child {
     position: static;
 }
 
 /* Estilos de los textos cuando la clase isActive está activada */
-.Bridge-p.isActive {
+.Bridge-div.isActive {
     opacity: 1; /* Opacidad 1 o visible */
 }
 
@@ -786,6 +810,11 @@ JavaScript según el scroll "excursiones.js" */
         grid-row: span 2;
         grid-column: span 3;
         order: 6;
+    }
+
+        /* Cambio de posicionamiento de la marquesina */
+    .Car {
+        top: -38px;
     }
 }
 
@@ -975,6 +1004,15 @@ JavaScript según el scroll "excursiones.js" */
         margin: 0 0 1rem;
     }
 
+    /* Cambios de tamaño y posicionamiento de la marquesina */
+    .Car {
+        top: -28px;
+    }
+    
+    .Car-img {
+        width: 3rem;
+    }
+
     /* Cambios de display y margenesde la sección footer */
     .Footer-Wrapper {
         grid-template-columns: 1fr;
@@ -989,5 +1027,16 @@ JavaScript según el scroll "excursiones.js" */
     .Excursiones-grid {
         grid-template-columns: repeat(3,1fr);
         margin: 0 auto 0;
+    }
+}
+
+/* Markee */
+/* Animación del svg situado en el footer */
+@keyframes car {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }

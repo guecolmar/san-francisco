@@ -16,7 +16,7 @@ headerBtn.addEventListener('click', () =>
 document.querySelectorAll('.Bridges').forEach((section) => {
     // Seleccionamos todos los botones y los parrafos dentro de cada sección
     const bridgeBtns = section.querySelectorAll('.Bridge-button');
-    const bridgeParagraphs = section.querySelectorAll('.Bridge-p');
+    const bridgeParagraphs = section.querySelectorAll('.Bridge-div');
 
     // Añadimos un evento de clic a cada botón
     bridgeBtns.forEach((eachBtn, index) => {
